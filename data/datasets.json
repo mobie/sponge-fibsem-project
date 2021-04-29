@@ -1,7 +1,7 @@
 {
   "datasets": [
     "cell1",
-    "cell3",
+    "cell2",
     "choanocyte-chamber"
   ],
   "defaultDataset": "cell1"
