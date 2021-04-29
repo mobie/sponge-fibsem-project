@@ -6,7 +6,8 @@
       255.0
     ],
     "storage": {
-      "local": "local/fibsem-raw.xml"
+      "local": "local/fibsem-raw.xml",
+      "remote": "remote/fibsem-raw.xml"
     },
     "type": "image"
   },
@@ -17,7 +18,8 @@
       1000.0
     ],
     "storage": {
-      "local": "local/fibsem-segmentation.xml"
+      "local": "local/fibsem-segmentation.xml",
+      "remote": "remote/fibsem-segmentation.xml"
     },
     "tableFolder": "tables/fibsem-segmentation",
     "type": "segmentation"

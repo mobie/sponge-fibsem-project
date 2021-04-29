@@ -1,15 +1,4 @@
 {
-  "fibsem-raw": {
-    "color": "white",
-    "contrastLimits": [
-      0.0,
-      255.0
-    ],
-    "storage": {
-      "local": "local/fibsem-raw.xml"
-    },
-    "type": "image"
-  },
   "fibsem-cell": {
     "color": "randomFromGlasbey",
     "contrastLimits": [
@@ -17,7 +6,8 @@
       1000.0
     ],
     "storage": {
-      "local": "local/fibsem-segmentation-cell.xml"
+      "local": "local/fibsem-segmentation-cell.xml",
+      "remote": "remote/fibsem-segmentation-cell.xml"
     },
     "tableFolder": "tables/fibsem-segmentation-cell",
     "type": "segmentation"
@@ -29,7 +19,8 @@
       1000.0
     ],
     "storage": {
-      "local": "local/fibsem-segmentation-cilia.xml"
+      "local": "local/fibsem-segmentation-cilia.xml",
+      "remote": "remote/fibsem-segmentation-cilia.xml"
     },
     "tableFolder": "tables/fibsem-segmentation-cilia",
     "type": "segmentation"
@@ -41,7 +32,8 @@
       1000.0
     ],
     "storage": {
-      "local": "local/fibsem-segmentation-golgi.xml"
+      "local": "local/fibsem-segmentation-golgi.xml",
+      "remote": "remote/fibsem-segmentation-golgi.xml"
     },
     "tableFolder": "tables/fibsem-segmentation-golgi",
     "type": "segmentation"
@@ -53,9 +45,22 @@
       1000.0
     ],
     "storage": {
-      "local": "local/fibsem-segmentation-nucleus.xml"
+      "local": "local/fibsem-segmentation-nucleus.xml",
+      "remote": "remote/fibsem-segmentation-nucleus.xml"
     },
     "tableFolder": "tables/fibsem-segmentation-nucleus",
     "type": "segmentation"
+  },
+  "fibsem-raw": {
+    "color": "white",
+    "contrastLimits": [
+      0.0,
+      255.0
+    ],
+    "storage": {
+      "local": "local/fibsem-raw.xml",
+      "remote": "remote/fibsem-raw.xml"
+    },
+    "type": "image"
   }
 }
