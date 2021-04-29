@@ -9,5 +9,53 @@
       "local": "local/fibsem-raw.xml"
     },
     "type": "image"
+  },
+  "fibsem-cell": {
+    "color": "randomFromGlasbey",
+    "contrastLimits": [
+      0.0,
+      1000.0
+    ],
+    "storage": {
+      "local": "local/fibsem-segmentation-cell.xml"
+    },
+    "tableFolder": "tables/fibsem-segmentation-cell",
+    "type": "segmentation"
+  },
+  "fibsem-cilia": {
+    "color": "randomFromGlasbey",
+    "contrastLimits": [
+      0.0,
+      1000.0
+    ],
+    "storage": {
+      "local": "local/fibsem-segmentation-cilia.xml"
+    },
+    "tableFolder": "tables/fibsem-segmentation-cilia",
+    "type": "segmentation"
+  },
+  "fibsem-golgi": {
+    "color": "randomFromGlasbey",
+    "contrastLimits": [
+      0.0,
+      1000.0
+    ],
+    "storage": {
+      "local": "local/fibsem-segmentation-golgi.xml"
+    },
+    "tableFolder": "tables/fibsem-segmentation-golgi",
+    "type": "segmentation"
+  },
+  "fibsem-nucleus": {
+    "color": "randomFromGlasbey",
+    "contrastLimits": [
+      0.0,
+      1000.0
+    ],
+    "storage": {
+      "local": "local/fibsem-segmentation-nucleus.xml"
+    },
+    "tableFolder": "tables/fibsem-segmentation-nucleus",
+    "type": "segmentation"
   }
 }
