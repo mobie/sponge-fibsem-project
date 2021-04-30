@@ -6,6 +6,7 @@ from elf.io import open_file
 from elf.mesh.mesh_to_segmentation import mesh_to_segmentation
 from elf.wrapper import RoiWrapper
 from mobie import add_segmentation
+from scipy.ndimage import binary_closing
 
 
 def get_name(ff):
@@ -70,8 +71,15 @@ def postprocess_seg(path, in_key, out_key, ds_name):
     # 1.) map background label
     bg_id = seg[0, 0, 0]
     seg[seg == bg_id] = 0
+    dtype = seg.dtype
 
-    # TODO more post-processing? depending on the segmentation type?
+    # 2.) different post-processing depending on the type of segmentation:
+    # 'cell', 'nucleus' -> postprocess so that this is a single object and apply closing
+    # 'cilia' -> no further post-processing necessary
+    # 'golgi' -> no further post-processing necessary
+    if in_key in ('cell', 'nucleus'):
+        seg[seg > 0] = 1
+        seg = binary_closing(seg, iterations=4).astype(dtype)
 
     # align with the mobie volume if this is cell1
     if ds_name == 'cell1':
@@ -85,6 +93,12 @@ def postprocess_seg(path, in_key, out_key, ds_name):
         )
         full_seg[bb] = seg
         seg = full_seg
+
+    print(in_key)
+    import napari
+    with napari.gui_qt():
+        viewer = napari.Viewer()
+        viewer.add_labels(seg)
 
     ds = f.require_dataset(out_key, shape=seg.shape, dtype=seg.dtype,
                            compression='gzip', chunks=(96,) * 3)
@@ -114,13 +128,15 @@ def add_to_mobie(ds_name):
     scale_factors = 4 * [[2, 2, 2]]
     chunks = 3 * (96,)
 
+    mobie_ds_name = 'cell2' if ds_name == 'cell3' else ds_name
+
     names = list(open_file(seg_path, 'r')['pp'].keys())
     for name in names:
         in_key = 'pp/' + name
         seg_name = f'fibsem-{name}'
         tmp_folder = f'./tmp_{ds_name}_{name}'
         add_segmentation(
-            seg_path, in_key, root, ds_name, seg_name,
+            seg_path, in_key, root, mobie_ds_name, seg_name,
             resolution=resolution, scale_factors=scale_factors, chunks=chunks,
             target='local', max_jobs=12, tmp_folder=tmp_folder
         )
@@ -215,7 +231,7 @@ def align_seg(compute_offset):
         viewer.add_image(raw2, name='mobie')
 
 
-def check_seg(ds_name):
+def check_seg(ds_name, use_halo=False):
     import napari
 
     p = _get_path(ds_name)
@@ -223,20 +239,31 @@ def check_seg(ds_name):
     ds = f['*.tif']
     ds.n_threads = 8
 
-    shape = ds.shape
-    halo = [25, 512, 512]
+    if use_halo:
+        shape = ds.shape
+        halo = [25, 512, 512]
+        bb = tuple(
+            slice(sh // 2 - ha, sh // 2 + ha) for sh, ha in zip(shape, halo)
+        )
+    else:
+        bb = np.s_[:]
 
-    bb = tuple(
-        slice(sh // 2 - ha, sh // 2 + ha) for sh, ha in zip(shape, halo)
-    )
+    print("Load raw ...")
     raw = ds[bb]
 
     segs = {}
     seg_path = f'/g/emcf/pape/sponge-meshes/{ds_name}.n5'
     with open_file(seg_path, 'r') as f:
-        for name, ds in f.items():
+        names = list(f['pp'].keys())
+        for name in names:
+            ds = f[name]
             ds.n_threads = 8
+            print("Load", name, "...")
             segs[name] = ds[bb]
+
+            ds = f['pp/' + name]
+            ds.n_threads = 8
+            segs[name + "_postprocessed"] = ds[bb]
 
     with napari.gui_qt():
         viewer = napari.Viewer()
@@ -247,17 +274,10 @@ def check_seg(ds_name):
 
 if __name__ == '__main__':
 
-    # TODO
-    # I assume the mesh coordinates are in nanometer, so we need to
-    # divide by the resolution in nm. Then it should hopefully fit the shape
-    # of the amira input files.
-    # Then, I still need to map the amira input files to the mobie files
-    # For cell 1 this is probably a crop and a resize by 1x2x2
-    # For cell 3 this should only be a resize by 1x2x2 (according to paolo)
+    add_seg('cell1')
+    # add_seg('cell3')
 
-    # add_seg('cell1')
-    add_seg('cell3')
-
-    # check_seg('cell3')
+    # check_seg('cell1', True)
+    # check_seg('cell3', True)
 
     # align_seg(True)
