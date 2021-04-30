@@ -6,10 +6,9 @@
       1000.0
     ],
     "storage": {
-      "local": "local/fibsem-segmentation-cell.xml",
-      "remote": "remote/fibsem-segmentation-cell.xml"
+      "local": "local/fibsem-cell.xml"
     },
-    "tableFolder": "tables/fibsem-segmentation-cell",
+    "tableFolder": "tables/fibsem-cell",
     "type": "segmentation"
   },
   "fibsem-cilia": {
@@ -19,10 +18,9 @@
       1000.0
     ],
     "storage": {
-      "local": "local/fibsem-segmentation-cilia.xml",
-      "remote": "remote/fibsem-segmentation-cilia.xml"
+      "local": "local/fibsem-cilia.xml"
     },
-    "tableFolder": "tables/fibsem-segmentation-cilia",
+    "tableFolder": "tables/fibsem-cilia",
     "type": "segmentation"
   },
   "fibsem-golgi": {
@@ -32,10 +30,9 @@
       1000.0
     ],
     "storage": {
-      "local": "local/fibsem-segmentation-golgi.xml",
-      "remote": "remote/fibsem-segmentation-golgi.xml"
+      "local": "local/fibsem-golgi.xml"
     },
-    "tableFolder": "tables/fibsem-segmentation-golgi",
+    "tableFolder": "tables/fibsem-golgi",
     "type": "segmentation"
   },
   "fibsem-nucleus": {
@@ -45,10 +42,9 @@
       1000.0
     ],
     "storage": {
-      "local": "local/fibsem-segmentation-nucleus.xml",
-      "remote": "remote/fibsem-segmentation-nucleus.xml"
+      "local": "local/fibsem-nucleus.xml"
     },
-    "tableFolder": "tables/fibsem-segmentation-nucleus",
+    "tableFolder": "tables/fibsem-nucleus",
     "type": "segmentation"
   },
   "fibsem-raw": {
