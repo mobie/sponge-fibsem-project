@@ -1,0 +1,167 @@
+{
+  "is2D": false,
+  "sources": {
+    "fibsem-cell": {
+      "segmentation": {
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-cell.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-cell.xml"
+          }
+        },
+        "tableData": {
+          "tsv": {
+            "relativePath": "tables/fibsem-cell"
+          }
+        }
+      }
+    },
+    "fibsem-cilia": {
+      "segmentation": {
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-cilia.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-cilia.xml"
+          }
+        },
+        "tableData": {
+          "tsv": {
+            "relativePath": "tables/fibsem-cilia"
+          }
+        }
+      }
+    },
+    "fibsem-golgi": {
+      "segmentation": {
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-golgi.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-golgi.xml"
+          }
+        },
+        "tableData": {
+          "tsv": {
+            "relativePath": "tables/fibsem-golgi"
+          }
+        }
+      }
+    },
+    "fibsem-nucleus": {
+      "segmentation": {
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-nucleus.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-nucleus.xml"
+          }
+        },
+        "tableData": {
+          "tsv": {
+            "relativePath": "tables/fibsem-nucleus"
+          }
+        }
+      }
+    },
+    "fibsem-raw": {
+      "image": {
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-raw.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-raw.xml"
+          }
+        }
+      }
+    }
+  },
+  "views": {
+    "Figure6D": {
+      "isExclusive": false,
+      "uiSelectionGroup": "bookmark",
+      "viewerTransform": {
+        "normalizedAffine": [
+          0.11078940205529272,
+          0.0,
+          0.0,
+          -0.8596822764318399,
+          0.0,
+          0.11078940205529272,
+          0.0,
+          -1.0195304498019857,
+          0.0,
+          0.0,
+          0.11078940205529272,
+          -1.0138012835595198
+        ]
+      }
+    },
+    "Figure6F": {
+      "isExclusive": false,
+      "uiSelectionGroup": "bookmark",
+      "viewerTransform": {
+        "normalizedAffine": [
+          0.10867452048625283,
+          0.0,
+          0.0,
+          -0.7896035414234793,
+          0.0,
+          0.10867452048625283,
+          0.0,
+          -0.8985769427099205,
+          0.0,
+          0.0,
+          0.10867452048625283,
+          -1.1862646974600528
+        ]
+      }
+    },
+    "Figure6G": {
+      "isExclusive": false,
+      "uiSelectionGroup": "bookmark",
+      "viewerTransform": {
+        "normalizedAffine": [
+          0.07015396442530764,
+          0.06990595043739023,
+          0.08650330651407812,
+          -2.0292455492314216,
+          0.0020632677627851976,
+          0.10143876039459206,
+          -0.0836490495149726,
+          -0.16516026403727427,
+          -0.11119985103660196,
+          0.04598454797064363,
+          0.05302128955791112,
+          -0.3277801281970991
+        ]
+      }
+    },
+    "default": {
+      "isExclusive": true,
+      "sourceDisplays": [
+        {
+          "imageDisplay": {
+            "color": "white",
+            "contrastLimits": [
+              0.0,
+              255.0
+            ],
+            "name": "fibsem-raw",
+            "opacity": 1.0,
+            "sources": [
+              "fibsem-raw"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "bookmark"
+    }
+  }
+}
