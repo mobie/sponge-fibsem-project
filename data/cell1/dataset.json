@@ -162,6 +162,102 @@
         }
       ],
       "uiSelectionGroup": "bookmark"
+    },
+    "fibsem-cell": {
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-cell",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-cell"
+            ],
+            "tables": [
+              "default.tsv"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "segmentation"
+    },
+    "fibsem-cilia": {
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-cilia",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-cilia"
+            ],
+            "tables": [
+              "default.tsv"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "segmentation"
+    },
+    "fibsem-golgi": {
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-golgi",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-golgi"
+            ],
+            "tables": [
+              "default.tsv"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "segmentation"
+    },
+    "fibsem-nucleus": {
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-nucleus",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-nucleus"
+            ],
+            "tables": [
+              "default.tsv"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "segmentation"
+    },
+    "fibsem-raw": {
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "imageDisplay": {
+            "color": "white",
+            "contrastLimits": [
+              0.0,
+              255.0
+            ],
+            "name": "fibsem-raw",
+            "opacity": 1.0,
+            "sources": [
+              "fibsem-raw"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "fibsem"
     }
   }
 }

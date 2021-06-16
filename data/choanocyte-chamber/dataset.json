@@ -51,6 +51,45 @@
         }
       ],
       "uiSelectionGroup": "bookmark"
+    },
+    "fibsem-raw": {
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "imageDisplay": {
+            "color": "white",
+            "contrastLimits": [
+              0.0,
+              255.0
+            ],
+            "name": "fibsem-raw",
+            "opacity": 1.0,
+            "sources": [
+              "fibsem-raw"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "fibsem"
+    },
+    "fibsem-segmentation": {
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-segmentation",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-segmentation"
+            ],
+            "tables": [
+              "default.tsv"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "segmentation"
     }
   }
 }
