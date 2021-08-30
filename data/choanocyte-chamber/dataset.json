@@ -3,6 +3,7 @@
   "sources": {
     "fibsem-raw": {
       "image": {
+        "description": "FIBSEM data of partial choanocyte data",
         "imageData": {
           "bdv.n5": {
             "relativePath": "images/local/fibsem-raw.xml"
@@ -15,6 +16,7 @@
     },
     "fibsem-segmentation": {
       "segmentation": {
+        "description": "Automatic segmentation of all cells, cilia and flagella",
         "imageData": {
           "bdv.n5": {
             "relativePath": "images/local/fibsem-segmentation.xml"

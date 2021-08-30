@@ -3,6 +3,7 @@
   "sources": {
     "fibsem-cell": {
       "segmentation": {
+        "description": "Amira segmentation of cell",
         "imageData": {
           "bdv.n5": {
             "relativePath": "images/local/fibsem-cell.xml"
@@ -20,6 +21,7 @@
     },
     "fibsem-cilia": {
       "segmentation": {
+        "description": "Amira segmentation of cilia",
         "imageData": {
           "bdv.n5": {
             "relativePath": "images/local/fibsem-cilia.xml"
@@ -37,6 +39,7 @@
     },
     "fibsem-golgi": {
       "segmentation": {
+        "description": "Amira segmentation of golgi",
         "imageData": {
           "bdv.n5": {
             "relativePath": "images/local/fibsem-golgi.xml"
@@ -54,6 +57,7 @@
     },
     "fibsem-nucleus": {
       "segmentation": {
+        "description": "Amira segmentation of nucleus",
         "imageData": {
           "bdv.n5": {
             "relativePath": "images/local/fibsem-nucleus.xml"
@@ -71,6 +75,7 @@
     },
     "fibsem-raw": {
       "image": {
+        "description": "FIBSEM data of partial choanocyte data",
         "imageData": {
           "bdv.n5": {
             "relativePath": "images/local/fibsem-raw.xml"
