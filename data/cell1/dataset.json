@@ -89,6 +89,7 @@
   },
   "views": {
     "Figure6D": {
+      "description": "The view corresponding to Figure6D.",
       "isExclusive": false,
       "uiSelectionGroup": "bookmark",
       "viewerTransform": {
@@ -109,6 +110,7 @@
       }
     },
     "Figure6F": {
+      "description": "The view corresponding to Figure6F.",
       "isExclusive": false,
       "uiSelectionGroup": "bookmark",
       "viewerTransform": {
@@ -129,6 +131,7 @@
       }
     },
     "Figure6G": {
+      "description": "The view corresponding to Figure6G.",
       "isExclusive": false,
       "uiSelectionGroup": "bookmark",
       "viewerTransform": {
@@ -149,6 +152,7 @@
       }
     },
     "default": {
+      "description": "The default view for this dataset.",
       "isExclusive": true,
       "sourceDisplays": [
         {
@@ -169,6 +173,7 @@
       "uiSelectionGroup": "bookmark"
     },
     "fibsem-cell": {
+      "description": "Amira segmentation of cell",
       "isExclusive": false,
       "sourceDisplays": [
         {
@@ -188,6 +193,7 @@
       "uiSelectionGroup": "segmentation"
     },
     "fibsem-cilia": {
+      "description": "Amira segmentation of cilia",
       "isExclusive": false,
       "sourceDisplays": [
         {
@@ -207,6 +213,7 @@
       "uiSelectionGroup": "segmentation"
     },
     "fibsem-golgi": {
+      "description": "Amira segmentation of golgi",
       "isExclusive": false,
       "sourceDisplays": [
         {
@@ -226,6 +233,7 @@
       "uiSelectionGroup": "segmentation"
     },
     "fibsem-nucleus": {
+      "description": "Amira segmentation of nucleus",
       "isExclusive": false,
       "sourceDisplays": [
         {
@@ -245,6 +253,7 @@
       "uiSelectionGroup": "segmentation"
     },
     "fibsem-raw": {
+      "description": "FIBSEM data of partial choanocyte data",
       "isExclusive": false,
       "sourceDisplays": [
         {
