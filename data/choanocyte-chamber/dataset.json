@@ -1,0 +1,100 @@
+{
+  "is2D": false,
+  "sources": {
+    "fibsem-raw": {
+      "image": {
+        "description": "FIBSEM data of partial choanocyte data",
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-raw.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-raw.xml"
+          }
+        }
+      }
+    },
+    "fibsem-segmentation": {
+      "segmentation": {
+        "description": "Automatic segmentation of all cells, cilia and flagella",
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-segmentation.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-segmentation.xml"
+          }
+        },
+        "tableData": {
+          "tsv": {
+            "relativePath": "tables/fibsem-segmentation"
+          }
+        }
+      }
+    }
+  },
+  "views": {
+    "default": {
+      "description": "The default view for this dataset.",
+      "isExclusive": true,
+      "sourceDisplays": [
+        {
+          "imageDisplay": {
+            "color": "white",
+            "contrastLimits": [
+              0.0,
+              255.0
+            ],
+            "name": "fibsem-raw",
+            "opacity": 1.0,
+            "sources": [
+              "fibsem-raw"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "bookmark"
+    },
+    "fibsem-raw": {
+      "description": "FIBSEM data of partial choanocyte data",
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "imageDisplay": {
+            "color": "white",
+            "contrastLimits": [
+              0.0,
+              255.0
+            ],
+            "name": "fibsem-raw",
+            "opacity": 1.0,
+            "sources": [
+              "fibsem-raw"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "fibsem"
+    },
+    "fibsem-segmentation": {
+      "description": "Automatic segmentation of all cells, cilia and flagella",
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-segmentation",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-segmentation"
+            ],
+            "tables": [
+              "default.tsv"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "segmentation"
+    }
+  }
+}

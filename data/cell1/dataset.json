@@ -1,0 +1,309 @@
+{
+  "is2D": false,
+  "sources": {
+    "fibsem-cell": {
+      "segmentation": {
+        "description": "Amira segmentation of cell",
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-cell.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-cell.xml"
+          }
+        },
+        "tableData": {
+          "tsv": {
+            "relativePath": "tables/fibsem-cell"
+          }
+        }
+      }
+    },
+    "fibsem-cilia": {
+      "segmentation": {
+        "description": "Amira segmentation of cilia",
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-cilia.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-cilia.xml"
+          }
+        },
+        "tableData": {
+          "tsv": {
+            "relativePath": "tables/fibsem-cilia"
+          }
+        }
+      }
+    },
+    "fibsem-golgi": {
+      "segmentation": {
+        "description": "Amira segmentation of golgi",
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-golgi.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-golgi.xml"
+          }
+        },
+        "tableData": {
+          "tsv": {
+            "relativePath": "tables/fibsem-golgi"
+          }
+        }
+      }
+    },
+    "fibsem-nucleus": {
+      "segmentation": {
+        "description": "Amira segmentation of nucleus",
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-nucleus.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-nucleus.xml"
+          }
+        },
+        "tableData": {
+          "tsv": {
+            "relativePath": "tables/fibsem-nucleus"
+          }
+        }
+      }
+    },
+    "fibsem-raw": {
+      "image": {
+        "description": "FIBSEM data of partial choanocyte data",
+        "imageData": {
+          "bdv.n5": {
+            "relativePath": "images/local/fibsem-raw.xml"
+          },
+          "bdv.n5.s3": {
+            "relativePath": "images/remote/fibsem-raw.xml"
+          }
+        }
+      }
+    }
+  },
+  "views": {
+    "Figure6D": {
+      "description": "The view corresponding to Figure6D.",
+      "isExclusive": false,
+      "uiSelectionGroup": "bookmark",
+      "viewerTransform": {
+        "normalizedAffine": [
+          0.11078940205529272,
+          0.0,
+          0.0,
+          -0.8596822764318399,
+          0.0,
+          0.11078940205529272,
+          0.0,
+          -1.0195304498019857,
+          0.0,
+          0.0,
+          0.11078940205529272,
+          -1.0138012835595198
+        ]
+      }
+    },
+    "Figure6F": {
+      "description": "The view corresponding to Figure6F.",
+      "isExclusive": false,
+      "uiSelectionGroup": "bookmark",
+      "viewerTransform": {
+        "normalizedAffine": [
+          0.10867452048625283,
+          0.0,
+          0.0,
+          -0.7896035414234793,
+          0.0,
+          0.10867452048625283,
+          0.0,
+          -0.8985769427099205,
+          0.0,
+          0.0,
+          0.10867452048625283,
+          -1.1862646974600528
+        ]
+      }
+    },
+    "Figure6G": {
+      "description": "The view corresponding to Figure6G.",
+      "isExclusive": false,
+      "uiSelectionGroup": "bookmark",
+      "viewerTransform": {
+        "normalizedAffine": [
+          0.07015396442530764,
+          0.06990595043739023,
+          0.08650330651407812,
+          -2.0292455492314216,
+          0.0020632677627851976,
+          0.10143876039459206,
+          -0.0836490495149726,
+          -0.16516026403727427,
+          -0.11119985103660196,
+          0.04598454797064363,
+          0.05302128955791112,
+          -0.3277801281970991
+        ]
+      }
+    },
+    "default": {
+      "description": "The default view for this dataset.",
+      "isExclusive": true,
+      "sourceDisplays": [
+        {
+          "imageDisplay": {
+            "color": "white",
+            "contrastLimits": [
+              0.0,
+              255.0
+            ],
+            "name": "fibsem-raw",
+            "opacity": 1.0,
+            "sources": [
+              "fibsem-raw"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "bookmark"
+    },
+    "fibsem-cell": {
+      "description": "Amira segmentation of cell",
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-cell",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-cell"
+            ],
+            "tables": [
+              "default.tsv"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "segmentation"
+    },
+    "fibsem-cilia": {
+      "description": "Amira segmentation of cilia",
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-cilia",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-cilia"
+            ],
+            "tables": [
+              "default.tsv"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "segmentation"
+    },
+    "fibsem-golgi": {
+      "description": "Amira segmentation of golgi",
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-golgi",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-golgi"
+            ],
+            "tables": [
+              "default.tsv"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "segmentation"
+    },
+    "fibsem-nucleus": {
+      "description": "Amira segmentation of nucleus",
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-nucleus",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-nucleus"
+            ],
+            "tables": [
+              "default.tsv"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "segmentation"
+    },
+    "fibsem-raw": {
+      "description": "FIBSEM data of partial choanocyte data",
+      "isExclusive": false,
+      "sourceDisplays": [
+        {
+          "imageDisplay": {
+            "color": "white",
+            "contrastLimits": [
+              0.0,
+              255.0
+            ],
+            "name": "fibsem-raw",
+            "opacity": 1.0,
+            "sources": [
+              "fibsem-raw"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "fibsem"
+    },
+    "organelle-segmentations": {
+      "isExclusive": true,
+      "sourceDisplays": [
+        {
+          "imageDisplay": {
+            "color": "white",
+            "contrastLimits": [
+              0.0,
+              255.0
+            ],
+            "name": "raw",
+            "opacity": 1.0,
+            "sources": [
+              "fibsem-raw"
+            ]
+          }
+        },
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "segmentations",
+            "opacity": 0.5,
+            "sources": [
+              "fibsem-nucleus",
+              "fibsem-golgi",
+              "fibsem-cilia"
+            ]
+          }
+        }
+      ],
+      "uiSelectionGroup": "bookmarks"
+    }
+  }
+}
