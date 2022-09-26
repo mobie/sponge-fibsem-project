@@ -13,6 +13,7 @@
           }
         },
         "tableData": {
+          "defaultTable": "default.tsv",
           "tsv": {
             "relativePath": "tables/fibsem-cell"
           }
@@ -31,6 +32,7 @@
           }
         },
         "tableData": {
+          "defaultTable": "default.tsv",
           "tsv": {
             "relativePath": "tables/fibsem-cilia"
           }
@@ -49,6 +51,7 @@
           }
         },
         "tableData": {
+          "defaultTable": "default.tsv",
           "tsv": {
             "relativePath": "tables/fibsem-golgi"
           }
@@ -67,6 +70,7 @@
           }
         },
         "tableData": {
+          "defaultTable": "default.tsv",
           "tsv": {
             "relativePath": "tables/fibsem-nucleus"
           }
@@ -183,9 +187,6 @@
             "opacity": 0.5,
             "sources": [
               "fibsem-cell"
-            ],
-            "tables": [
-              "default.tsv"
             ]
           }
         }
@@ -203,9 +204,6 @@
             "opacity": 0.5,
             "sources": [
               "fibsem-cilia"
-            ],
-            "tables": [
-              "default.tsv"
             ]
           }
         }
@@ -223,9 +221,6 @@
             "opacity": 0.5,
             "sources": [
               "fibsem-golgi"
-            ],
-            "tables": [
-              "default.tsv"
             ]
           }
         }
@@ -243,9 +238,6 @@
             "opacity": 0.5,
             "sources": [
               "fibsem-nucleus"
-            ],
-            "tables": [
-              "default.tsv"
             ]
           }
         }
