@@ -34,6 +34,77 @@
     }
   },
   "views": {
+    "choanocyte-neuroid-interaction": {
+      "isExclusive": true,
+      "sourceDisplays": [
+        {
+          "imageDisplay": {
+            "color": "r=255,g=255,b=255,a=255",
+            "contrastLimits": [
+              0.0,
+              255.0
+            ],
+            "name": "fibsem-raw",
+            "opacity": 1.0,
+            "showImagesIn3d": false,
+            "sources": [
+              "fibsem-raw"
+            ],
+            "visible": true
+          }
+        },
+        {
+          "segmentationDisplay": {
+            "lut": "glasbey",
+            "name": "fibsem-segmentation",
+            "opacity": 0.7957,
+            "scatterPlotAxes": [
+              "anchor_x",
+              "anchor_y"
+            ],
+            "selectedSegmentIds": [
+              "fibsem-segmentation;0;94250",
+              "fibsem-segmentation;0;102963",
+              "fibsem-segmentation;0;73998",
+              "fibsem-segmentation;0;70785",
+              "fibsem-segmentation;0;94169",
+              "fibsem-segmentation;0;119925",
+              "fibsem-segmentation;0;217574",
+              "fibsem-segmentation;0;74165"
+            ],
+            "showScatterPlot": false,
+            "showSelectedSegmentsIn3d": true,
+            "showTable": true,
+            "sources": [
+              "fibsem-segmentation"
+            ],
+            "tables": [
+              "default.tsv"
+            ],
+            "visible": true
+          }
+        }
+      ],
+      "sourceTransforms": [],
+      "uiSelectionGroup": "bookmark",
+      "viewerTransform": {
+        "normalizedAffine": [
+          0.0401722934072211,
+          -0.009038616372361936,
+          0.033732403833825246,
+          -1.652179776588827,
+          -0.0006100021037701468,
+          0.05122631821214794,
+          0.014452578724643323,
+          -2.4582114764467797,
+          -0.03491703812995017,
+          -0.011293916434607046,
+          0.03855687632226676,
+          0.6048199841797803
+        ],
+        "timepoint": 0
+      }
+    },
     "default": {
       "description": "The default view for this dataset.",
       "isExclusive": true,
@@ -95,77 +166,6 @@
         }
       ],
       "uiSelectionGroup": "segmentation"
-    },
-    "choanocyte-neuroid-interaction": {
-      "uiSelectionGroup": "bookmark",
-      "sourceDisplays": [
-        {
-          "imageDisplay": {
-            "sources": [
-              "fibsem-raw"
-            ],
-            "color": "r=255,g=255,b=255,a=255",
-            "contrastLimits": [
-              0.0,
-              255.0
-            ],
-            "showImagesIn3d": false,
-            "name": "fibsem-raw",
-            "opacity": 1.0,
-            "visible": true
-          }
-        },
-        {
-          "segmentationDisplay": {
-            "sources": [
-              "fibsem-segmentation"
-            ],
-            "selectedSegmentIds": [
-              "fibsem-segmentation;0;94250",
-              "fibsem-segmentation;0;102963",
-              "fibsem-segmentation;0;73998",
-              "fibsem-segmentation;0;70785",
-              "fibsem-segmentation;0;94169",
-              "fibsem-segmentation;0;119925",
-              "fibsem-segmentation;0;217574",
-              "fibsem-segmentation;0;74165"
-            ],
-            "showSelectedSegmentsIn3d": true,
-            "lut": "glasbey",
-            "showScatterPlot": false,
-            "scatterPlotAxes": [
-              "anchor_x",
-              "anchor_y"
-            ],
-            "tables": [
-              "default.tsv"
-            ],
-            "showTable": true,
-            "name": "fibsem-segmentation",
-            "opacity": 0.7957,
-            "visible": true
-          }
-        }
-      ],
-      "sourceTransforms": [],
-      "viewerTransform": {
-        "normalizedAffine": [
-          0.0401722934072211,
-          -0.009038616372361936,
-          0.033732403833825246,
-          -1.652179776588827,
-          -6.100021037701468E-4,
-          0.05122631821214794,
-          0.014452578724643323,
-          -2.4582114764467797,
-          -0.03491703812995017,
-          -0.011293916434607046,
-          0.03855687632226676,
-          0.6048199841797803
-        ],
-        "timepoint": 0
-      },
-      "isExclusive": true
     }
   }
 }
