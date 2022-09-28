@@ -5,9 +5,5 @@
     "choanocyte-chamber"
   ],
   "defaultDataset": "cell1",
-  "imageDataFormats": [
-    "bdv.n5.s3",
-    "bdv.n5"
-  ],
-  "specVersion": "0.2.0"
+  "specVersion": "0.3.0"
 }

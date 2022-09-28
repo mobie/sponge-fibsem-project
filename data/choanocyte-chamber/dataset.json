@@ -78,9 +78,6 @@
             "sources": [
               "fibsem-segmentation"
             ],
-            "tables": [
-              "default.tsv"
-            ],
             "visible": true
           }
         }
@@ -158,9 +155,6 @@
             "opacity": 0.5,
             "sources": [
               "fibsem-segmentation"
-            ],
-            "tables": [
-              "default.tsv"
             ]
           }
         }
