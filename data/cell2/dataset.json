@@ -183,9 +183,6 @@
             "opacity": 0.5,
             "sources": [
               "fibsem-cell"
-            ],
-            "tables": [
-              "default.tsv"
             ]
           }
         }
@@ -203,9 +200,6 @@
             "opacity": 0.5,
             "sources": [
               "fibsem-cilia"
-            ],
-            "tables": [
-              "default.tsv"
             ]
           }
         }
@@ -223,9 +217,6 @@
             "opacity": 0.5,
             "sources": [
               "fibsem-golgi"
-            ],
-            "tables": [
-              "default.tsv"
             ]
           }
         }
@@ -243,9 +234,6 @@
             "opacity": 0.5,
             "sources": [
               "fibsem-nucleus"
-            ],
-            "tables": [
-              "default.tsv"
             ]
           }
         }
